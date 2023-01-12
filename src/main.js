@@ -44,11 +44,11 @@ async function rateForCoin(baseCoin) {
 
 }
 
-const caixaEl = document.getElementById('caixa');
-const moedaEl = document.getElementById('moeda');
-const btnEl = document.getElementById('btn');
+const caixaEl = document.getElementById('board-interior');
+const moedaEl = document.getElementById('insertion');
+const btnEl = document.getElementById('search');
 btnEl.setAttribute("disabled", "disabled");
-moedaEl.addEventListener('keyup', (e) => {
+moedaEl.addEventListener('keyup', () => {
     if (moedaEl.value.length === 3) {
         btnEl.removeAttribute("disabled");
     } else {
@@ -64,12 +64,19 @@ btnEl.addEventListener('click', async () => {
     const rate = await rateForCoin(moeda);
     caixaEl.innerText = '';
 
+    const moedaPedidaEl = document.getElementById('moeda_pedida');
+    moedaPedidaEl.innerText = moeda;
+
     Object.keys(rate).forEach(moeda => {
         const valor = rate[moeda];
         // console.log(moeda, valor);
         const variavel = document.createElement('div');
         variavel.classList.add('caixinha');
-        variavel.innerText = `${moeda} | ${valor}`;
+        variavel.innerHTML = `
+        <img src="src/moedas.svg" alt="">
+        <span class="moeda">${moeda}</span>
+        <span class="valor">${valor.toFixed(3)}</span>
+        `;
         caixaEl.appendChild(variavel);
     })
 

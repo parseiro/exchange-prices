@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Fira+Code:wght@400;700&family=Fira+Sans&family=Source+Serif+Pro:ital,wght@0,600;0,900;1,400;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: #282C33;
+}
+
+main {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    /*padding-top: 63px;*/
+    /*border: 1px solid white;*/
+    width: 900px;
+}
+
+#title .verde {
+    color: #95EBA8;
+}
+
+#title {
+    margin-bottom: 28px;
+
+    font-family: 'Fira Code', monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 79px;
+
+    color: #FFFFFF;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.gap-x-14 {
+    column-gap: 14px;
+}
+
+.gap-y-14 {
+    row-gap: 14px;
+}
+
+.gap-x-22 {
+    column-gap: 22px;
+}
+
+
+#coin {
+    margin-top: 0;
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+#insertion {
+    /*position: absolute;*/
+    width: 171px;
+    height: 48px;
+    /*left: 306px;*/
+    /*top: 185px;*/
+    background: rgba(217, 217, 217, 0.1);
+    border-radius: 10px;
+    color: white;
+}
+
+#search {
+    box-sizing: border-box;
+
+    /*position: absolute;*/
+    width: 171px;
+    height: 48px;
+    /*left: 491px;*/
+    /*top: 185px;*/
+
+    background: #96EB95;
+    border: 1px solid #96EB95;
+    border-radius: 10px;
+
+    font-family: 'Fira Code', monospace;
+    /*font-style: normal;*/
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+
+    color: #373737;
+    padding: 11px 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 57px;
+
+    /*position: absolute;*/
+    /*width: 900px;*/
+    /*height: 583px;*/
+    /*left: 306px;*/
+    /*top: 290px;*/
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+}
+
+#board-title {
+    margin-top: 24px;
+    /*width: 384px;*/
+    /*height: 30px;*/
+
+    font-family: 'Fira Code', monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+
+    color: #FFFFFF;
+}
+
+#board-interior {
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 14px;
+    row-gap: 22px;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.caixinha {
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding-left: 9px;
+    padding-right: 19px;
+    /*padding: 14px 19px 14px 9px;*/
+    width: 150px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.caixinha * {
+    padding: 0;
+    margin: 0;
+}
+
+.caixinha .moeda {
+    font-family: 'Fira Code', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+}
+
+.caixinha .valor {
+    font-family: 'Fira Code', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+
+    color: #FFE713;
+}
