@@ -1,15 +1,10 @@
 body {
   display: flex;
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0.17%;
   background: #282C33;
+  flex-direction: column;
 }
 
 #tittle {
-  display: flex;
   position: absolute;
   width: 517px;
   height: 74px;
@@ -24,32 +19,40 @@ body {
 }
 
 #coin {
-  display: flex;
   position: absolute;
   width: 111px;
   height: 15px;
   left: 307px;
   top: 165px;
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  padding-top: 50px;
+  color: #FFFFFF;
+}
+
+#form {
+  padding: 10px;
 }
 
 #insertion {
-  display: flex;
   position: absolute;
+  background: rgba(217, 217, 217, 0.1);
+  border-radius: 10px;
   width: 171px;
   height: 48px;
   left: 306px;
-  top: 185px;
-  background: rgba(217, 217, 217, 0.1);
-  border-radius: 10px;
+  top: 250px;
 }
 
 #search {
-  display: flex;
   position: absolute;
   width: 111px;
-  height: 25px;
-  left: 521px;
-  top: 196px;
+  height: 48px;
+  left: 490px;
+  top: 253px;
   font-family: 'Fira Code';
   font-style: normal;
   font-weight: 700;
@@ -59,16 +62,11 @@ body {
 }
 
 #board {
-  display: flex;
   position: absolute;
   width: 900px;
   height: 583px;
   left: 306px;
-  top: 290px;
+  top: 350px;
   background: rgba(255, 255, 255, 0.06);
   border-radius: 20px;
-}
-
-#board-title {
- text-align: center;
 }
