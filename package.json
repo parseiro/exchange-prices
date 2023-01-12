@@ -1,5 +1,28 @@
 {
+  "name": "exercise-casa-de-cambio",
+  "description": "```bash\r npx vite dev\r ```",
+  "version": "1.0.0",
+  "main": "index.js",
   "dependencies": {
     "sweetalert2": "^11.7.0"
-  }
+  },
+  "devDependencies": {
+    "prettier": "^2.8.2",
+    "vite": "^4.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielReis1/exercise-casa-de-cambio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielReis1/exercise-casa-de-cambio/issues"
+  },
+  "homepage": "https://github.com/GabrielReis1/exercise-casa-de-cambio#readme",
+  "type": "module"
 }
