@@ -7,7 +7,9 @@
     "sweetalert2": "^11.7.0"
   },
   "devDependencies": {
-    "prettier": "^2.8.2",
+    "eslint": "^8.31.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.4",
     "vite": "^4.0.4"
   },
   "scripts": {
