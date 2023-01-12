@@ -6,6 +6,7 @@ body {
     display: flex;
     justify-content: center;
     background: #282C33;
+    font-family: 'Fira Code', sans-serif;
 }
 
 main {
@@ -26,8 +27,6 @@ main {
 #title {
     margin-bottom: 28px;
 
-    font-family: 'Fira Code', monospace;
-    font-style: normal;
     font-weight: 700;
     font-size: 60px;
     line-height: 79px;
@@ -67,8 +66,6 @@ main {
 
 #coin {
     margin-top: 0;
-    font-family: 'Fira Code';
-    font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
@@ -99,8 +96,6 @@ main {
     border: 1px solid #96EB95;
     border-radius: 10px;
 
-    font-family: 'Fira Code', monospace;
-    /*font-style: normal;*/
     font-weight: 700;
     font-size: 20px;
     line-height: 26px;
@@ -133,8 +128,6 @@ main {
     /*width: 384px;*/
     /*height: 30px;*/
 
-    font-family: 'Fira Code', monospace;
-    font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 31px;
@@ -175,8 +168,6 @@ main {
 }
 
 .caixinha .moeda {
-    font-family: 'Fira Code', sans-serif;
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
@@ -185,11 +176,13 @@ main {
 }
 
 .caixinha .valor {
-    font-family: 'Fira Code', sans-serif;
-    font-style: normal;
     font-weight: 400;
     font-size: 13px;
     line-height: 17px;
 
     color: #FFE713;
+}
+
+.invisible {
+    visibility: hidden;
 }

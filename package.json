@@ -16,8 +16,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite --open",
-    "deploy": "gh-pages -d dist",
-    "lint": "eslint ./src"
+    "deploy": "vite build && gh-pages -d dist",
+    "lint": "eslint ./src",
+    "build": "vite build"
   },
   "repository": {
     "type": "git",

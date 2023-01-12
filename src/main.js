@@ -3,6 +3,12 @@ import Swal from 'sweetalert2';
 const conversionRates = {};
 window.conversionRates = conversionRates;
 
+const boardEl = document.getElementById('board');
+const caixaEl = document.getElementById('board-interior');
+const moedaEl = document.getElementById('insertion');
+const btnEl = document.getElementById('search');
+btnEl.setAttribute('disabled', 'disabled');
+
 function errorDialog(error) {
   Swal.fire({
     title: 'Error:',
@@ -11,6 +17,14 @@ function errorDialog(error) {
     confirmButtonText: 'OK',
   });
 }
+
+moedaEl.addEventListener('keyup', () => {
+  if (moedaEl.value.length === 3) {
+    btnEl.removeAttribute('disabled');
+  } else {
+    btnEl.setAttribute('disabled', 'disabled');
+  }
+});
 
 async function rateForCoin(baseCoin) {
   const coin = baseCoin.toUpperCase();
@@ -31,29 +45,18 @@ async function rateForCoin(baseCoin) {
     }
 
     if (coin !== json.base) {
-      errorDialog(`A moeda não existe neste sistema: ${baseCoin}`);
+      errorDialog(`Not recognized: ${baseCoin}. Try USD.`);
+      boardEl.classList.add('invisible');
       return {};
     }
     // console.log(json);
     conversionRates[coin] = json.rates;
   }
-  if (!conversionRates[coin]) {
+  /*  if (!conversionRates[coin]) {
     throw new Error('erro muito sinistro');
-  }
+  } */
   return conversionRates[coin];
 }
-
-const caixaEl = document.getElementById('board-interior');
-const moedaEl = document.getElementById('insertion');
-const btnEl = document.getElementById('search');
-btnEl.setAttribute('disabled', 'disabled');
-moedaEl.addEventListener('keyup', () => {
-  if (moedaEl.value.length === 3) {
-    btnEl.removeAttribute('disabled');
-  } else {
-    btnEl.setAttribute('disabled', 'disabled');
-  }
-});
 
 btnEl.addEventListener('click', async () => {
   const moeda = moedaEl.value;
@@ -63,6 +66,7 @@ btnEl.addEventListener('click', async () => {
 
   const moedaPedidaEl = document.getElementById('moeda_pedida');
   moedaPedidaEl.innerText = moeda;
+  boardEl.classList.remove('invisible');
 
   Object.keys(rate).forEach((moedaAqui) => {
     const valor = rate[moedaAqui];

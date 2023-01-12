@@ -9,15 +9,15 @@
 </head>
 <body>
 <main>
-    <p id="title">Casa de <span class="verde">Cambio</span></p>
-    <p id="coin">Digite a moeda:</p>
+    <p id="title"><span class="verde">Exchange</span> shop</p>
+    <p id="coin">Type the coin to use as base (ex.: USD, EUR, BRL):</p>
     <div class="flex gap-x-14">
         <input type="text" placeholder="USD" id="insertion" minlength="3" maxlength="3">
-        <button type="button" id="search">Pesquisar</button>
+        <button type="button" id="search">Search</button>
     </div>
 
-    <div id="board">
-        <p id="board-title">Valores Referentes a 1 <span id="moeda_pedida"></span></p>
+    <div id="board" class="invisible">
+        <p id="board-title">1 <span id="moeda_pedida"> has these values</span></p>
         <div id="board-interior">
 
         </div>
